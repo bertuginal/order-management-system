@@ -36,23 +36,22 @@ public class CustomerService {
                 .orElse(null);
     }
 
-    public void filterByFullNameContainingLetter(String letter) {
+    private double calculateTotalInvoiceAmount(Customer customer) {
+        return customer.getOrderList().stream()
+                .flatMap(order -> order.getProductList().stream())
+                .map(Product::getPrice)
+                .reduce(0.0, Double::sum);
+    }
+
+    public void filterByCustomerNameContainsLetter(String letter) {
         Optional.ofNullable(customerRepository.findAll())
                 .ifPresent(customers -> customers.stream()
                         .filter(customer -> customer.getFirstName().contains(letter) || customer.getLastName().contains(letter))
                         .forEach(System.out::println));
     }
 
-    public void totalInvoiceAmountsForEnrolledInJune() {
-        List<Double> totalInvoicesAmounts = customerRepository.findAll().stream()
-                .filter(customer -> customer.getCreateDate().getMonth() == Month.JUNE)
-                .map(this::calculateTotalInvoiceAmount)
-                .toList();
 
-        totalInvoicesAmounts.forEach(System.out::println);
-    }
-
-    public void filterNamesWithInvoicesUnderAmount(Double amount) {
+    public void filterCustomerNamesWithInvoicesUnderAmount(Double amount) {
         customerRepository.findAll().stream()
                 .filter(customer -> customer.getOrderList().stream()
                         .anyMatch(order -> order.getInvoiceId()!= null &&
@@ -65,10 +64,12 @@ public class CustomerService {
                 .forEach(System.out::println);
     }
 
-    private double calculateTotalInvoiceAmount(Customer customer) {
-        return customer.getOrderList().stream()
-                .flatMap(order -> order.getProductList().stream())
-                .map(Product::getPrice)
-                .reduce(0.0, Double::sum);
+    public void totalInvoiceAmountsForEnrolledInJune() {
+        List<Double> totalInvoicesAmounts = customerRepository.findAll().stream()
+                .filter(customer -> customer.getCreateDate().getMonth() == Month.JUNE)
+                .map(this::calculateTotalInvoiceAmount)
+                .toList();
+
+        totalInvoicesAmounts.forEach(System.out::println);
     }
 }

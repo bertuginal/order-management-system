@@ -143,7 +143,7 @@ public class OrderManagementSystemApplication {
 					break;
 				case 5:
 					System.out.println("************************ List of all customer's full names containing the letter 'C' **************************");
-					customerService.filterByFullNameContainingLetter("C");
+					customerService.filterByCustomerNameContainsLetter("C");
 					break;
 				case 6:
 					System.out.println("********************* Total Amounts of Invoices Created by Customers in June *********************");
@@ -151,7 +151,7 @@ public class OrderManagementSystemApplication {
 					break;
 				case 7:
 					System.out.println("***************** List of Names of Customers with Invoices Under 500TL *****************");
-					customerService.filterNamesWithInvoicesUnderAmount(500.0);
+					customerService.filterCustomerNamesWithInvoicesUnderAmount(500.0);
 					break;
 				default:
 					isBack = true;
@@ -359,11 +359,11 @@ public class OrderManagementSystemApplication {
 					break;
 				case 5:
 					System.out.println("************************** List of Invoices Above 1500 TL *************************");
-					invoiceService.filterHighValueInvoices(1500.0);
+					invoiceService.filterHighAmountInvoices(1500.0);
 					break;
 				case 6:
 					System.out.println("************************* Average of Over 1500 TL Invoices ************************");
-					System.out.println(invoiceService.calculateAverageOfHighValueInvoices());
+					System.out.println(invoiceService.calculateAverageOfInvoiceAmount());
 					break;
 				default:
 					isBack = true;

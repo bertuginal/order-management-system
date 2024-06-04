@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 
 public class Invoice {
     private Long id;
-    private LocalDateTime createdDatetime;
+    private LocalDateTime createdDate;
     private Double amount;
 
-    public Invoice(LocalDateTime createdDatetime, Double amount) {
-        this.createdDatetime = createdDatetime;
+    public Invoice(LocalDateTime createdDate, Double amount) {
+        this.createdDate = createdDate;
         this.amount = amount;
     }
 
@@ -20,12 +20,12 @@ public class Invoice {
         this.id = id;
     }
 
-    public LocalDateTime getCreatedDatetime() {
-        return createdDatetime;
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
     }
 
-    public void setCreatedDatetime(LocalDateTime createdDatetime) {
-        this.createdDatetime = createdDatetime;
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
     }
 
     public Double getAmount() {
@@ -40,7 +40,7 @@ public class Invoice {
     public String toString() {
         return "Invoice{" +
                 "id=" + id +
-                ", createdDatetime=" + createdDatetime +
+                ", createdDate=" + createdDate +
                 ", amount=" + amount +
                 '}';
     }

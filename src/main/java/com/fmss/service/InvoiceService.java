@@ -36,20 +36,20 @@ public class InvoiceService {
                 .orElse(null);
     }
 
-    public void filterHighValueInvoices(Double amount) {
+    public void filterHighAmountInvoices(Double amount) {
         invoiceRepository.findAll().stream()
                 .filter(invoice -> invoice.getAmount()!= null && invoice.getAmount() >= amount)
                 .forEach(System.out::println);
     }
 
-    public double calculateAverageOfHighValueInvoices() {
-        List<Double> highValueInvoiceAmounts = invoiceRepository.findAll().stream()
+    public double calculateAverageOfInvoiceAmount() {
+        List<Double> invoiceAmounts = invoiceRepository.findAll().stream()
                 .filter(invoice -> invoice.getAmount()!= null && invoice.getAmount() >= 1500)
                 .map(Invoice::getAmount)
                 .toList();
 
-        double totalAmount = highValueInvoiceAmounts.stream().mapToDouble(Double::doubleValue).sum();
-        return totalAmount / highValueInvoiceAmounts.size();
+        double totalAmount = invoiceAmounts.stream().mapToDouble(Double::doubleValue).sum();
+        return totalAmount / invoiceAmounts.size();
     }
 
 
