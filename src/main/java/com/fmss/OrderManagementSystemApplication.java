@@ -33,20 +33,20 @@ public class OrderManagementSystemApplication {
 		while (!isExit) {
 			System.out.println("***************************** ORDER MANAGEMENT SYSTEM ******************************");
 			System.out.println("Please choose a model!");
-			System.out.println("1 -> Customer");
-			System.out.println("2 -> Product");
+			System.out.println("1 -> Product");
+			System.out.println("2 -> Invoice");
 			System.out.println("3 -> Order");
-			System.out.println("4 -> Invoice");
+			System.out.println("4 -> Customer");
 			System.out.println("****************");
 			System.out.println("0 -> Exit");
 			System.out.println("****************");
 			int chosen = input.nextInt();
 
 			switch (chosen) {
-				case 1 -> customerOperations(customerService, orderService,input);
-				case 2 -> productOperations(productService, input);
+				case 1 -> productOperations(productService, input);
+				case 2 -> invoiceOperations(invoiceService, input);
 				case 3 -> orderOperations(orderService, productService, customerService, invoiceService, input);
-				case 4 -> invoiceOperations(invoiceService, input);
+				case 4 -> customerOperations(customerService, orderService,input);
 				default -> isExit = true;
 			}
 
@@ -336,6 +336,8 @@ public class OrderManagementSystemApplication {
 					invoiceService.save(invoice);
 					break;
 				case 2:
+					System.out.println("********************************** INVOICE LIST *****************************");
+					invoiceService.findAll();
 					System.out.println("********************************** DELETE INVOICE *****************************");
 					System.out.println("Please enter an invoice ID:");
 					Long deleteInvoiceId = input.nextLong();

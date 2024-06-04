@@ -14,7 +14,6 @@ public class CustomerService {
 
     public CustomerService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
-        //this.initializeDataLoad();
     }
 
     public void save(Customer customer) {
@@ -72,30 +71,4 @@ public class CustomerService {
                 .map(Product::getPrice)
                 .reduce(0.0, Double::sum);
     }
-
-    /*private void initializeDataLoad() {
-        List<Order> orderList1 = List.of(
-                new Order(1L,1L, List.of(
-                        new Product("Monster Abra A5", "Notebook", 2390.0, 100)))
-        );
-
-        List<Order> orderList2 = List.of(
-                new Order(1L,1L, List.of(
-                        new Product("Monster Abra A5", "Notebook", 2390.0, 100),
-                        new Product("Samsung Galaxy A50", "Phone", 1230.0, 50)
-                ))
-        );
-
-        List<Order> orderList3 = List.of(
-                new Order(1L,1L, List.of(
-                        new Product("Monster Abra A5", "Notebook", 2390.0, 100),
-                        new Product("Samsung Galaxy A50", "Phone", 1230.0, 50),
-                        new Product("Logitech G213", "Keyboard", 6200.0, 40)
-                ))
-        );
-
-        this.save(new Customer("John", "Doe", "john.doe@example.com", "password123", orderList1));
-        this.save(new Customer("Jane", "Doe", "jane.doe@example.com", "password456", orderList2));
-        this.save(new Customer("Jim", "Brown", "jim.brown@example.com", "password789", orderList3));
-    }*/
 }
