@@ -95,8 +95,6 @@ public class OrderManagementSystemApplication {
 					List<Order> orderList = new ArrayList<>();
 
 					while (!isContinue) {
-						System.out.println("************************************ ORDER LIST **************************************");
-						orderService.findAll();
 						System.out.println("************************************ Add Order to Customer or Save Customer **************************************");
 						System.out.println("Please select an action: ");
 						System.out.println("1 -> Add Order");
@@ -106,6 +104,8 @@ public class OrderManagementSystemApplication {
 						input.nextLine();
 
 						if (chosen == 1) {
+							System.out.println("************************************ ORDER LIST **************************************");
+							orderService.findAll();
 							System.out.println("Please add the order ID: ");
 							Long id = input.nextLong();
 							orderList.add(orderService.findById(id));
@@ -256,8 +256,6 @@ public class OrderManagementSystemApplication {
 					List<Product> productList = new ArrayList<>();
 
 					while (!isContinue) {
-						System.out.println("******************************* PRODUCT LIST *******************************");
-						productService.findAll();
 						System.out.println("***************************** Add Product to Order or Save Order ********************");
 						System.out.println("Please select action: ");
 						System.out.println("1 -> Add Product");
@@ -267,6 +265,8 @@ public class OrderManagementSystemApplication {
 						int chosen = input.nextInt();
 
 						if (chosen == 1) {
+							System.out.println("******************************* PRODUCT LIST *******************************");
+							productService.findAll();
 							System.out.println("Please add the product ID: ");
 							Long id = input.nextLong();
 							productList.add(productService.findById(id));
