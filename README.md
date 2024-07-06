@@ -30,6 +30,8 @@ This project is an order management system console application project where a c
 
 ❾ Lists the sector in which the companies whose average invoices for the month of June are below 750 are in.
 
+&nbsp; 
+
 ✔️ See the [open issues](https://github.com/bertuginal/order-management-system/issues) for a full list of proposed features (and known issues)!
 
 &nbsp; 
@@ -46,9 +48,13 @@ This project is an order management system console application project where a c
 &nbsp; 
 
 <!-- SCREENSHOT -->
-## Application Output Screenshot
+## 📸 Application Console Output Screenshot
 
+![image](https://github.com/bertuginal/order-management-system/assets/73167951/7c1d5786-fb27-4098-a94c-f571f9b8fed1)
 
+![image](https://github.com/bertuginal/order-management-system/assets/73167951/08bb5a3c-3132-4505-9fe0-55f4ebfcafe7)
+
+&nbsp; 
 
 <!-- INSTALLATION -->
 ## ↓ Installation ↓
