@@ -80,11 +80,11 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ❶ Fork the Project
 
-❷ Create your Feature Branch (`git checkout -b feature/WeatherApi`)
+❷ Create your Feature Branch (`git checkout -b feature/order-management-system`)
 
-❸  Commit your Changes (`git commit -m 'Add some WeatherApi'`)
+❸  Commit your Changes (`git commit -m 'Add some order-management-system'`)
 
-❹  Push to the Branch (`git push origin feature/WeatherApi`)
+❹  Push to the Branch (`git push origin feature/order-management-system`)
 
 ❺ Open a Pull Request
    
