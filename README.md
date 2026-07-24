@@ -98,7 +98,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 📧 **E-mail:** [bertuginal@yahoo.com](mailto:bertuginal@yahoo.com)
 
-ℹ️ **LinkedIn:** [in/bertuginal](https://linkedin.com)
+ℹ️ **LinkedIn:** [in/bertuginal](https://www.linkedin.com/in/bertuginal/)
 
 
 
