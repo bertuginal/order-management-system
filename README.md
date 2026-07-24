@@ -96,11 +96,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 <!-- CONTACT -->
 ## ☎️ Contact
 
-📧 E-mail: [bertuginal@yahoo.com](mailto:bertuginal@yahoo.com)
+📧 **E-mail:** [bertuginal@yahoo.com](mailto:bertuginal@yahoo.com)
 
-📱 Mobile Phone: [(+90) 507 038 33 23](mailto:+905070383323)
-
-📋 Project Link: [https://github.com/bertuginal/order-management-system](https://github.com/bertuginal/order-management-system)
+ℹ️ **LinkedIn:** [in/bertuginal](https://linkedin.com)
 
 
 
